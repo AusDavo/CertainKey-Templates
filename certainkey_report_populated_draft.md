@@ -1,13 +1,15 @@
 ---
-title: CertainKey Bitcoin Balance and Control Verification Report
+title: CertainKey Verification Report
+subtitle: Bitcoin Balance and Control
 author: David Pinkerton
 date: 20 August, 2024
 ---
 
 **Prepared for:** Horizon Trustees ATF Horizon Super Fund  
 **ABN:** 12 345 678 901  
-**Report Date:** 20/08/2024  
-**Report Reference:** CERTAINKEY-2024-EOFY-24L05
+**Report Date:** 20/08/2024
+
+_Reference: CK-example_
 
 # Executive Summary
 
