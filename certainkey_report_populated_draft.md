@@ -7,7 +7,8 @@ date: 20 August, 2024
 
 \begin{titlepage}
 \centering
-\vspace\*{2cm}
+\null
+\vspace{2cm}
 {\Huge\bfseries CertainKey Verification Report\par}
 \vspace{0.5cm}
 {\Large Bitcoin Balance and Control\par}
