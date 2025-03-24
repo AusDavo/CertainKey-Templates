@@ -8,25 +8,27 @@ date: 20 August, 2024
 \begin{titlepage}
 \centering
 \null
-\vspace{4cm}
 {\Huge\bfseries CertainKey Verification Report\par}
-\vspace{0.5cm}
+\vspace{1cm} % Increased spacing
 {\Large Bitcoin Balance and Control\par}
-\vspace{0.5cm}
-{\large Prepared by David Pinkerton\par}
-\vspace{0.5cm}
-{\large 20 August, 2024\par}
-\vspace{0.5cm}
-\flushright
+\vspace{1cm}
+{\color{cyan}\rule{0.5\textwidth}{0.5pt}\par} % Subtle cyan rule for branding
+\vspace{3cm} % Space before the table
 {\small
-\textbf{Prepared for:} Horizon Trustees ATF Horizon Super Fund \\
-\textbf{ABN:} 12 345 678 901 \\
-\textbf{Report Date:} 20/08/2024 \\
-\textbf{Reference:} CK-example
+\begin{tabular}{@{}r@{\ :\ }l@{}}
+\textbf{Prepared for} & Horizon Trustees ATF Horizon Super Fund \\
+\textbf{ABN} & 12 345 678 901 \\
+\textbf{Report Date} & 20/08/2024 \\
+\textbf{Reference} & CK-example \\
+\end{tabular}
 }
-\vspace{6cm} % Increased to push graphic lower
+\vfill % Push the graphic to the bottom
 \includegraphics[width=\textwidth]{certainkeybrand.png}
 \end{titlepage}
+
+\newpage
+\tableofcontents
+\clearpage
 
 ## Executive Summary
 
@@ -53,6 +55,9 @@ date: 20 August, 2024
 
 #### Key Holder Verification
 
+\begin{center}
+\begin{minipage}{\textwidth}
+\centering
 \begin{tabular}{@{}llll@{}}
 \toprule
 \textbf{Name} & \textbf{Role} & \textbf{Approved} & \textbf{Status} \\
@@ -62,6 +67,8 @@ date: 20 August, 2024
 \rowcolor{lightgray} \textbf{Michael Brown} & \textbf{Financial Advisor} & \textbf{Yes} & \textbf{Pass} \\
 \bottomrule
 \end{tabular}
+\end{minipage}
+\end{center}
 
 #### Quorum and Rating
 
@@ -72,48 +79,57 @@ date: 20 August, 2024
 
 Horizon Super Fund held 5.2371 BTC as at 30/06/2024, 23:59 AEST, with full control verified by all three key holders. Final assessment: **Pass (A+)**.
 
-\tableofcontents
 \newpage
 
 ## Purpose and Scope
 
-- **Purpose:** To provide independent verification that Horizon Super Fund owns and controls its Bitcoin holdings, and to confirm the balance as at 30/06/2024 for End of Financial Year (EOFY) reporting, ensuring compliance with ATO and ASIC requirements.
-- **Scope:** This engagement encompassed a balance confirmation, multi-signature key verification, and quorum assessment to establish ownership and control.
-- **Use:** Meets ATO and ASIC requirements for SMSF tax and audit compliance.
+### Purpose
+
+To provide independent verification that Horizon Super Fund owns and controls its Bitcoin holdings, and to confirm the balance as at 30/06/2024 for End of Financial Year (EOFY) reporting, ensuring compliance with ATO and ASIC requirements.
+
+### Scope
+
+This engagement encompassed a balance confirmation, multi-signature key verification, and quorum assessment to establish ownership and control.
+
+### Use
+
+Meets ATO and ASIC requirements for SMSF tax and audit compliance.
+
+\newpage
 
 ## How We Did It
 
-- **Information Provided**
+### Information Provided
 
-  - Horizon Super Fund supplied their wallet descriptor and a signed ownership declaration.
-  - Date/time set: 30/06/2024, 23:59 AEST.
+- Horizon Super Fund supplied their wallet descriptor and a signed ownership declaration.
+- Date/time set: 30/06/2024, 23:59 AEST.
 
-- **Balance Check**
+### Balance Check
 
-  - Used Sparrow Wallet, a trusted open-source tool, to load the provided keys and confirm the balance of 5.2371 BTC. This was cross-verified using a local Bitcoin Node, Bitaroo Electrum Server, and Blockstream Electrum Server, ensuring accuracy as at 30/06/2024, 23:59 AEST.
-  - Fiat value calculated at AUD 81,750 per BTC (Bitaroo’s closing price), totaling AUD 428,150.
+- Used Sparrow Wallet, a trusted open-source tool, to load the provided keys and confirm the balance of 5.2371 BTC. This was cross-verified using a local Bitcoin Node, Bitaroo Electrum Server, and Blockstream Electrum Server, ensuring accuracy as at 30/06/2024, 23:59 AEST.
+- Fiat value calculated at AUD 81,750 per BTC (Bitaroo’s closing price), totaling AUD 428,150.
 
-- **Key Verification**
+### Key Verification
 
-  - Issued unique cryptographic challenges to each key holder, requiring them to sign with their respective private keys, ensuring individual control over their portion of the multi-signature wallet.
-  - Verified all 3 signatures using Gatekeeper, a secure digital signature verification system for Bitcoin, confirming control by all parties.
+- Issued unique cryptographic challenges to each key holder, requiring them to sign with their respective private keys, ensuring individual control over their portion of the multi-signature wallet.
+- Verified all 3 signatures using Gatekeeper, a secure digital signature verification system for Bitcoin, confirming control by all parties.
 
-- **Report Process**
+### Report Process
 
-  - Drafted the report, reviewed it with Horizon Trustees, and finalised it on 20/08/2024.
-  - Stored a PDF hash in our database for verification purposes.
+- Drafted the report, reviewed it with Horizon Trustees, and finalised it on 20/08/2024.
+- Stored a PDF hash in our database for verification purposes.
 
-- **Data Security**
+### Data Security
 
-  - Deleted all sensitive wallet descriptor and key data following finalisation to ensure confidentiality. The wallet descriptor hash, included in this report, is a one-way cryptographic output that protects privacy while allowing verification if needed.
+- Deleted all sensitive wallet descriptor and key data following finalisation to ensure confidentiality. The wallet descriptor hash, included in this report, is a one-way cryptographic output that protects privacy while allowing verification if needed.
 
-- **Regulatory Fit**
+### Regulatory Fit
 
-  - Aligns with ASIC, ATO, and AASB 1056 standards for fair-value reporting of self-managed superannuation fund assets.
-
-## Detailed Results
+- Aligns with ASIC, ATO, and AASB 1056 standards for fair-value reporting of self-managed superannuation fund assets.
 
 \newpage
+
+## Detailed Results
 
 ### Blockchain Confirmation
 
@@ -135,6 +151,8 @@ Horizon Super Fund held 5.2371 BTC as at 30/06/2024, 23:59 AEST, with full contr
   `7d5b07fad41588dde313e8e83c53436dbed0923f1af26a318fa9a1eff1fe6478`  
   (see Appendix for more information)
 - **Balance:** 5.2371 BTC
+
+\newpage
 
 ## Final Statement
 
@@ -164,6 +182,8 @@ John Smith, Trustee
 - **Limitations:** Balances are subject to change after this timestamp, and valuations rely on trusted third-party data from Bitaroo Pty Ltd.
 - **Not an Audit:** This verification does not constitute a comprehensive financial audit but serves as a targeted proof of holdings for EOFY purposes.
 
+\newpage
+
 ## Appendix: Wallet Descriptor Hash
 
 The wallet descriptor (a technical wallet summary) is hashed using SHA-256 to protect privacy while allowing verification. This hash ensures that sensitive details remain confidential, but anyone with the exact descriptor can replicate the hash to confirm its authenticity. Example:
@@ -171,7 +191,9 @@ The wallet descriptor (a technical wallet summary) is hashed using SHA-256 to pr
 - **Input:**
 
   ```text
-  sh(multi(2,[fingerprint1/48'/0'/0']xpub1,[fingerprint2/48'/0'/0']xpub2,[fingerprint3/48'/0'/0']xpub3))
+  sh(multi(2,[fingerprint1/48'/0'/0']xpub1,
+  [fingerprint2/48'/0'/0']xpub2,
+  [fingerprint3/48'/0'/0']xpub3))
   ```
 
 - **Hash:**

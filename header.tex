@@ -4,27 +4,33 @@
 
 % Colors from the branding graphic
 \usepackage{xcolor}
-\definecolor{cyan}{HTML}{00C8C8} % Approximate cyan from the graphic
+\definecolor{cyan}{HTML}{00C8C8} % Main cyan for ## headings
+\definecolor{darkcyan}{HTML}{008B8B} % Darker cyan for ### headings
+\definecolor{lightcyan}{HTML}{66D9D9} % Lighter cyan for footer
 \definecolor{lightgray}{gray}{0.95}
 
-% Margins
+% Margins (increased for better readability)
 \usepackage{geometry}
-\geometry{a4paper, margin=1in}
+\geometry{a4paper, margin=1.25in}
 
 % Package for including images
 \usepackage{graphicx}
+
+% Package to prevent page breaks after headings
+\usepackage{needspace}
 
 % Fancy headers and footers
 \usepackage{fancyhdr}
 \pagestyle{fancy}
 \fancyhf{}
 \rhead{\thepage}
-\lfoot{\color{cyan}CertainKey Verification Report}
+\lfoot{\color{lightcyan}CertainKey Verification Report}
 
 % Style section headings with cyan color
 \usepackage{titlesec}
-\titleformat{\section}{\Large\bfseries\color{cyan}}{\thesection}{1em}{}
-\titleformat{\subsection}{\large\bfseries\color{black}}{\thesubsection}{1em}{}
+\titleformat{\section}{\Large\bfseries\color{cyan}}{\thesection}{1em}{\needspace{5\baselineskip}}
+\titleformat{\subsection}{\large\bfseries\color{darkcyan}}{\thesubsection}{1em}{\needspace{3\baselineskip}}
+\titleformat{\subsubsection}{\normalsize\bfseries\color{black}\itshape}{\thesubsubsection}{1em}{\needspace{2\baselineskip}}
 
 % Load packages for tables
 \usepackage{array, booktabs}
@@ -33,16 +39,16 @@
 % Style code blocks (for wallet hash)
 \usepackage{listings}
 \lstset{
-  basicstyle=\ttfamily\scriptsize, % Reduced font size for better wrapping
+  basicstyle=\ttfamily\scriptsize, % Small font size
   backgroundcolor=\color{lightgray},
-  breaklines=true,
-  breakatwhitespace=true, % Break at whitespace to avoid awkward splits
-  frame=single
+  breaklines=true, % Enable line breaking
+  breakatwhitespace=false, % Allow breaking at non-whitespace
+  literate={,}{,\linebreak[0]}1, % Replace commas with comma + optional break
+  columns=flexible, % Flexible breaking
+  frame=single,
+  breakindent=0pt, % No indent after breaks
+  linewidth=0.9\textwidth % Force width constraint
 }
-
-% Add a horizontal rule after sections
-\let\oldsection\section
-\renewcommand{\section}[1]{\oldsection{#1}\vspace{0.2cm}\noindent\rule{\textwidth}{0.5pt}\vspace{0.2cm}}
 
 % Ensure title page doesn't have headers/footers
 \fancypagestyle{plain}{
