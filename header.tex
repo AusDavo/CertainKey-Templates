@@ -1,0 +1,52 @@
+% Set document font to a modern sans-serif
+\usepackage[sfdefault]{roboto}
+\usepackage[T1]{fontenc}
+
+% Colors from the branding graphic
+\usepackage{xcolor}
+\definecolor{cyan}{HTML}{00C8C8} % Approximate cyan from the graphic
+\definecolor{lightgray}{gray}{0.95}
+
+% Margins
+\usepackage{geometry}
+\geometry{a4paper, margin=1in}
+
+% Package for including images
+\usepackage{graphicx}
+
+% Fancy headers and footers
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhf{}
+\rhead{\thepage}
+\lfoot{\color{cyan}CertainKey Verification Report}
+
+% Style section headings with cyan color
+\usepackage{titlesec}
+\titleformat{\section}{\Large\bfseries\color{cyan}}{\thesection}{1em}{}
+\titleformat{\subsection}{\large\bfseries\color{black}}{\thesubsection}{1em}{}
+
+% Load packages for tables
+\usepackage{array, booktabs}
+\usepackage{colortbl}
+
+% Style code blocks (for wallet hash)
+\usepackage{listings}
+\lstset{
+  basicstyle=\ttfamily\small,
+  backgroundcolor=\color{lightgray},
+  breaklines=true,
+  frame=single
+}
+
+% Add a horizontal rule after sections
+\let\oldsection\section
+\renewcommand{\section}[1]{\oldsection{#1}\vspace{0.2cm}\noindent\rule{\textwidth}{0.5pt}\vspace{0.2cm}}
+
+% Ensure title page doesn't have headers/footers
+\fancypagestyle{plain}{
+  \fancyhf{}
+}
+
+% Suppress Pandoc's default title page
+\renewcommand{\maketitle}{}
