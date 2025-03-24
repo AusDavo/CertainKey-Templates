@@ -5,11 +5,25 @@ author: David Pinkerton
 date: 20 August, 2024
 ---
 
+\begin{titlepage}
+\centering
+\vspace\*{2cm}
+{\Huge\bfseries CertainKey Verification Report\par}
+\vspace{0.5cm}
+{\Large Bitcoin Balance and Control\par}
+\vspace{0.5cm}
+{\large Prepared by David Pinkerton\par}
+\vspace{0.5cm}
+{\large 20 August, 2024\par}
+\vspace{2cm}
+\includegraphics[width=\textwidth]{certainkeybrand.png}
+\end{titlepage}
+
 **Prepared for:** Horizon Trustees ATF Horizon Super Fund  
 **ABN:** 12 345 678 901  
 **Report Date:** 20/08/2024
 
-Reference: CK-example
+**Reference:** CK-example
 
 ## Executive Summary
 
@@ -30,17 +44,21 @@ Reference: CK-example
 - **Balance:** 5.2371 BTC
 - **Fiat Value:** AUD 428,150 (using Bitaroo Pty Ltd's closing price)
 - **Wallet Descriptor Hash:**  
-  7d5b07fad41588dde313e8e83c53436dbed0923f1af26a318fa9a1eff1fe6478
+  `7d5b07fad41588dde313e8e83c53436dbed0923f1af26a318fa9a1eff1fe6478`
 
 ### Key Audit Results
 
 #### Key Holder Verification
 
-| Name              | Role                  | Approved | Status   |
-| ----------------- | --------------------- | -------- | -------- |
-| **John Smith**    | **Trustee**           | **Yes**  | **Pass** |
-| **Emily Chen**    | **Trustee**           | **Yes**  | **Pass** |
-| **Michael Brown** | **Financial Advisor** | **Yes**  | **Pass** |
+\begin{tabular}{@{}llll@{}}
+\toprule
+\textbf{Name} & \textbf{Role} & \textbf{Approved} & \textbf{Status} \\
+\midrule
+\rowcolor{lightgray} \textbf{John Smith} & \textbf{Trustee} & \textbf{Yes} & \textbf{Pass} \\
+\textbf{Emily Chen} & \textbf{Trustee} & \textbf{Yes} & \textbf{Pass} \\
+\rowcolor{lightgray} \textbf{Michael Brown} & \textbf{Financial Advisor} & \textbf{Yes} & \textbf{Pass} \\
+\bottomrule
+\end{tabular}
 
 #### Quorum and Rating
 
@@ -87,9 +105,9 @@ Horizon Super Fund held 5.2371 BTC as at 30/06/2024, 23:59 AEST, with full contr
 
 - Aligns with ASIC, ATO, and AASB 1056 standards for fair-value reporting of self-managed superannuation fund assets.
 
----
-
 ## Detailed Results
+
+\newpage
 
 ### Blockchain Confirmation
 
@@ -145,9 +163,13 @@ The wallet descriptor (a technical wallet summary) is hashed using SHA-256 to pr
 
 - **Input:**
 
-sh(multi(2,[fingerprint1/48'/0'/0']xpub1,[fingerprint2/48'/0'/0']xpub2,[fingerprint3/48'/0'/0']xpub3))
-text
+  ```text
+  sh(multi(2,[fingerprint1/48'/0'/0']xpub1,[fingerprint2/48'/0'/0']xpub2,[fingerprint3/48'/0'/0']xpub3))
 
-- **Hash:**
+    Hash:
+    text
 
-7d5b07fad41588dde313e8e83c53436dbed0923f1af26a318fa9a1eff1fe6478
+    7d5b07fad41588dde313e8e83c53436dbed0923f1af26a318fa9a1eff1fe6478
+  ```
+
+Anyone with the exact descriptor can replicate this hash to verify the wallet.
