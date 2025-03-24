@@ -8,7 +8,7 @@ date: 20 August, 2024
 \begin{titlepage}
 \centering
 \null
-\vspace{2cm}
+\vspace{4cm} % Increased to push content down
 {\Huge\bfseries CertainKey Verification Report\par}
 \vspace{0.5cm}
 {\Large Bitcoin Balance and Control\par}
@@ -16,17 +16,21 @@ date: 20 August, 2024
 {\large Prepared by David Pinkerton\par}
 \vspace{0.5cm}
 {\large 20 August, 2024\par}
-\vspace{2cm}
+\vspace{4cm} % Increased to push graphic lower
 \includegraphics[width=\textwidth]{certainkeybrand.png}
 \end{titlepage}
 
 **Prepared for:** Horizon Trustees ATF Horizon Super Fund  
 **ABN:** 12 345 678 901  
-**Report Date:** 20/08/2024
-
+**Report Date:** 20/08/2024  
 **Reference:** CK-example
 
+\tableofcontents
+\newpage
+
 ## Executive Summary
+
+\newpage
 
 ### Entity Information
 
@@ -72,11 +76,15 @@ Horizon Super Fund held 5.2371 BTC as at 30/06/2024, 23:59 AEST, with full contr
 
 ## Purpose and Scope
 
+\newpage
+
 - **Purpose:** To provide independent verification that Horizon Super Fund owns and controls its Bitcoin holdings, and to confirm the balance as at 30/06/2024 for End of Financial Year (EOFY) reporting, ensuring compliance with ATO and ASIC requirements.
 - **Scope:** This engagement encompassed a balance confirmation, multi-signature key verification, and quorum assessment to establish ownership and control.
 - **Use:** Meets ATO and ASIC requirements for SMSF tax and audit compliance.
 
 ## How We Did It
+
+\newpage
 
 ### Information Provided
 
@@ -133,9 +141,13 @@ Horizon Super Fund held 5.2371 BTC as at 30/06/2024, 23:59 AEST, with full contr
 
 ## Final Statement
 
+\newpage
+
 Based on the verification process, Horizon Super Fund held 5.2371 BTC, valued at AUD 428,150, as at 30/06/2024, 23:59 AEST. Control was confirmed by the participation of all three key holders, exceeding the required quorum. Assessment: **Pass (A+)**.
 
 ## Authentication
+
+\newpage
 
 A SHA-256 hash of this PDF is stored by CertainKey for verification purposes.
 
@@ -148,11 +160,14 @@ David Pinkerton - Principal Verifier, CertainKey
 By signing below, the Customer confirms receipt of this report and agreement to the verification process outlined herein.
 
 **Customer Representative:**  
-[Signature]  
+\vspace{1cm}  
+\rule{5cm}{0.4pt}  
 John Smith, Trustee  
 **Date:** 20/08/2024
 
 ## Disclaimer & Limitations
+
+\newpage
 
 - **Scope:** This report reflects the bitcoin balance and control status solely as at 30/06/2024, 23:59 AEST.
 - **Limitations:** Balances are subject to change after this timestamp, and valuations rely on trusted third-party data from Bitaroo Pty Ltd.
@@ -160,17 +175,20 @@ John Smith, Trustee
 
 ## Appendix A: Wallet Descriptor Hash
 
+\newpage
+
 The wallet descriptor (a technical wallet summary) is hashed using SHA-256 to protect privacy while allowing verification. This hash ensures that sensitive details remain confidential, but anyone with the exact descriptor can replicate the hash to confirm its authenticity. Example:
 
 - **Input:**
 
   ```text
   sh(multi(2,[fingerprint1/48'/0'/0']xpub1,[fingerprint2/48'/0'/0']xpub2,[fingerprint3/48'/0'/0']xpub3))
+  ```
 
-    Hash:
-    text
+- **Hash:**
 
-    7d5b07fad41588dde313e8e83c53436dbed0923f1af26a318fa9a1eff1fe6478
+  ```text
+  7d5b07fad41588dde313e8e83c53436dbed0923f1af26a318fa9a1eff1fe6478
   ```
 
 Anyone with the exact descriptor can replicate this hash to verify the wallet.
