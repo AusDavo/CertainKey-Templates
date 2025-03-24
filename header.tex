@@ -33,9 +33,10 @@
 % Style code blocks (for wallet hash)
 \usepackage{listings}
 \lstset{
-  basicstyle=\ttfamily\small,
+  basicstyle=\ttfamily\scriptsize, % Reduced font size for better wrapping
   backgroundcolor=\color{lightgray},
   breaklines=true,
+  breakatwhitespace=true, % Break at whitespace to avoid awkward splits
   frame=single
 }
 
