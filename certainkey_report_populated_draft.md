@@ -2,16 +2,14 @@
 
 ## Bitcoin Balance and Control
 
----
-
-### Verification Overview
-
 **Client:** Horizon Trustees ATF Horizon Super Fund (ABN 12 345 678 901)  
 **Purpose:** EOFY Bitcoin Holdings Verification  
 **Balance Snapshot:** 30 June 2024, 23:59 AEST  
 **Prepared by:** David Pinkerton, CertainKey  
 **Date Issued:** 20 August 2024  
 **Reference:** CK-example  
+
+![brandimage](logo.png)
 
 ---
 
